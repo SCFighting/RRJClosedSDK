@@ -22,7 +22,7 @@ Apple Silicon 模拟器上链接；**Intel Mac（x86_64）模拟器不支持**�
 主工程 `Podfile` 中：
 
 ```ruby
-pod 'RRJClosedSDK', :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :tag => '1.0.2'
+pod 'RRJClosedSDK', :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :tag => '1.0.3'
 ```
 
 然后执行 `pod install` 即可。
@@ -35,5 +35,9 @@ pod 'RRJClosedSDK', :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :t
 - 升级某个 SDK 时，替换对应 `Frameworks/*.framework`，提交并在远端打新的 tag，
   主工程 Podfile 改 `:tag` 即可。
 - 本仓库只存放这些闭源二进制，不依赖主工程的 `Vendor/Scripts/`。
-- 架构变更：自 `1.0.1` 起各 framework 仅保留 arm64 切片（已移除 i386 / armv7 /
-  armv7s / x86_64），以兼容真机与 Apple Silicon 模拟器（二者均为 arm64）。
+- 架构变更：
+  - 自 `1.0.1` 起各 framework 仅保留 arm64 切片（已移除 i386 / armv7 / armv7s /
+    x86_64），兼容真机与 Apple Silicon 模拟器（二者均为 arm64）。
+  - 自 `1.0.3` 起进一步对 8 个 framework 做等长「中和」：将每个 `.o` 的
+    `LC_BUILD_VERSION` 平台标记抹为中性，链接器按目标推定平台，真机与 arm64 模拟器
+    可直接链接，无需 `duo_bootstrap` 在两种态之间切换。
