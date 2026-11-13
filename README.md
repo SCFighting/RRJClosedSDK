@@ -2,6 +2,8 @@
 
 人人讲（wangju）闭源 SDK 的私有 CocoaPods 仓库。
 
+> 当前最新版本：**1.0.3**（用法见下方「使用方式」）。
+
 包含以下已「中和平台标记」的静态 framework（**arm64 单架构**，可在真机与
 Apple Silicon 模拟器上链接；**Intel Mac（x86_64）模拟器不支持**）：
 
