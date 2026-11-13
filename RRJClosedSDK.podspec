@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'RRJClosedSDK'
-  s.version      = '1.0.0'
+  s.version      = '1.0.2'
   s.summary      = '人人讲闭源 SDK：自定义 GPUImage fork + 腾讯 IM/TLS 旧版静态 framework'
   # TODO: 把下面的 URL 换成你自己的远端仓库地址（创建好远程仓库后填写）
   s.homepage     = 'https://github.com/SCFighting/RRJClosedSDK'
