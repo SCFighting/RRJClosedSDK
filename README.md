@@ -22,7 +22,7 @@ Apple Silicon 模拟器上链接；**Intel Mac（x86_64）模拟器不支持**�
 主工程 `Podfile` 中：
 
 ```ruby
-pod 'RRJClosedSDK', :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :tag => '1.0.1'
+pod 'RRJClosedSDK', :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :tag => '1.0.2'
 ```
 
 然后执行 `pod install` 即可。

@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/SCFighting/RRJClosedSDK'
   s.license      = { :type => 'MIT', :text => 'Internal use only' }
   s.author       = { 'renrenjiang' => '' }
-  # :git 来源 + tag。Podfile 里用 `pod 'RRJClosedSDK', :git => '...', :tag => '1.0.0'` 引用。
+  # :git 来源 + tag。Podfile 里用 `pod 'RRJClosedSDK', :git => '...', :tag => '1.0.2'` 引用。
   # TODO: 把下面的 URL 换成你自己的远端仓库地址
   s.source       = { :git => 'https://github.com/SCFighting/RRJClosedSDK.git', :tag => s.version.to_s }
   s.platform     = :ios, '15.0'
